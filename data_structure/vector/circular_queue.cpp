@@ -1,5 +1,5 @@
 # include <iostream>
-# include <queue>
+# include <vector>
 
 class MyCircularQueue {
 private:
@@ -47,6 +47,21 @@ public:
         return (rear + 1) % maxSize == front;
     }
 };
+
+int main() {
+    MyCircularQueue* obj = new MyCircularQueue(3);
+    std::cout << obj->enQueue(1) << std::endl; // 返回 true
+    std::cout << obj->enQueue(2) << std::endl; // 返回 true
+    std::cout << obj->enQueue(3) << std::endl; // 返回 true
+    std::cout << obj->enQueue(4) << std::endl; // 返回 false，队列已满
+    std::cout << obj->Rear() << std::endl;     // 返回 3
+    std::cout << obj->isFull() << std::endl;   // 返回 true
+    std::cout << obj->deQueue() << std::endl;  // 返回 true
+    std::cout << obj->enQueue(4) << std::endl; // 返回 true
+    std::cout << obj->Rear() << std::endl;     // 返回 4
+    delete obj;
+    return 0;
+}
 
 /**
  * Your MyCircularQueue object will be instantiated and called as such:

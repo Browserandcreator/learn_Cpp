@@ -2,6 +2,9 @@
 #include <vector> // 引入vector头文件
 
 int main() {
+    // vector是一个动态顺序容器，可以存储任意类型的元素
+    // vector可以在任意位置插入和删除元素，同时会涉及元素的搬运
+    // 当vector空间不足时，会自动扩展空间，通常是扩展为原来的两倍
     std::vector<int> v; // 创建一个存储int的vector
 
     // 添加元素（尾部插入）
@@ -11,7 +14,7 @@ int main() {
 
     std::cout << "vector的大小: " << v.size() << std::endl;
 
-    // 访问元素
+    // 访问元素，特别之处是可以使用下标访问
     std::cout << "第一个元素: " << v[0] << std::endl;
     std::cout << "最后一个元素: " << v.back() << std::endl;
 
