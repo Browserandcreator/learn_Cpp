@@ -1,0 +1,20 @@
+# 让所有文本文件默认使用 LF（跨平台更友好）
+* text=auto eol=lf
+
+# 针对 C++ 源码（强制 LF）
+*.c     text eol=lf
+*.cpp   text eol=lf
+*.h     text eol=lf
+*.hpp   text eol=lf
+
+# 针对脚本文件（强制 LF）
+*.sh    text eol=lf
+*.py    text eol=lf
+
+# 针对 Windows 专用的批处理脚本（强制 CRLF）
+*.bat   text eol=crlf
+*.cmd   text eol=crlf
+
+# 针对 Markdown、文档类文件（保持默认，避免格式问题）
+*.md    text
+*.txt   text
