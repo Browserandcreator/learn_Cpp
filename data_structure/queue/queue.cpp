@@ -2,9 +2,10 @@
 #include <queue> // 引入队列头文件
 
 int main() {
+    // 标准库命名空间的queue容器
     std::queue<int> q; // 创建一个存储 int 的队列
 
-    // 入队操作
+    // 入队操作，注意在队尾入队
     q.push(10);
     q.push(20);
     q.push(30);
